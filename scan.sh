@@ -6,7 +6,7 @@ PORTS=$(seq 1 1000)
 scan_port() {
     local ip=$1
     local port=$2
-    timeout 1 bash -c "echo > /dev/tcp/$ip/$port" 2>/dev/null && echo "Port $port is open" || echo "Port $port is closed"
+    timeout 1 bash -c "echo > /dev/tcp/$ip/$port" 2>/dev/null && echo "Port $port is open"
 }
 
 if [ -z "$IP_ADDRESS" ]; then
